@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Échange de Compétences</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(45deg, #3667af, #3667af);
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #575757;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem 0;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        h1, h2, h3 {
+            color: #3667af;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            margin-top: 1rem;
+            background: #3667af;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #3667af;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        .features, .advantages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature, .advantage {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature:hover, .advantage:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight {
+            color: #3667af;
+            font-weight: bold;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Form Styles */
+        .contact-form {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #3667af;
+            font-weight: bold;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: #3667af;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #3667af;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- En-tête -->
+    <header>
+        <h1>Bienvenue sur SkillSwap</h1>
+        <p>La plateforme d'échange de compétences gratuite et collaborative</p>
+    </header>
+
+    <!-- Barre de navigation -->
+    <nav>
+        <a href="#concept">Concept</a>
+        <a href="#fonctionnalites">Fonctionnalités</a>
+        <a href="#avantages">Avantages</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="container">
+        <!-- Section Concept -->
+        <section id="concept" class="section">
+            <h2>Le Concept</h2>
+            <p>
+                Avec <span class="highlight">SkillSwap</span>, vous pouvez <strong>échanger vos compétences</strong> gratuitement :
+                offrez ce que vous maîtrisez et apprenez quelque chose en retour. Ensemble, développons une communauté d'apprentissage <em>humaine</em> et <em>accessible</em>.
+            </p>
+        </section>
+
+        <!-- Section Fonctionnalités -->
+        <section id="fonctionnalites" class="section">
+            <h2>Fonctionnalités Principales</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>1. Création de Profils Utilisateurs</h3>
+                    <p>
+                        Indiquez vos compétences (<em>ex. : guitare, programmation</em>) et ce que vous souhaitez apprendre.
+                        Chaque compétence possède un <strong>niveau</strong> : débutant, intermédiaire ou expert.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3>2. Matchmaking Intelligent</h3>
+                    <p>
+                        Notre algorithme vous connecte avec des utilisateurs aux compétences complémentaires pour des échanges gagnant-gagnant.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3>3. Sessions en Ligne ou en Personne</h3>
+                    <p>
+                        Organisez des sessions <span class="highlight">en visioconférence</span> ou <span class="highlight">en présentiel</span> grâce à notre calendrier intégré.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3>4. Évaluations et Recommandations</h3>
+                    <p>
+                        Laissez des avis après chaque échange pour encourager les meilleures pratiques. Gagnez des badges pour récompenser votre engagement.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3>5. Communauté & Forums</h3>
+                    <p>
+                        Posez des questions, partagez vos conseils et rejoignez des groupes pour un apprentissage collaboratif enrichissant.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3>6. Marché Secondaire</h3>
+                    <p>
+                        Achetez ou vendez des services si un échange gratuit n'est pas possible.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Avantages -->
+        <section id="avantages" class="section">
+            <h2>Les Avantages de SkillSwap</h2>
+            <div class="advantages">
+                <div class="advantage">
+                    <h3>🌍 Accessibilité</h3>
+                    <p>Apprenez sans barrière financière et élargissez vos horizons.</p>
+                </div>
+                <div class="advantage">
+                    <h3>🤝 Création de Liens Sociaux</h3>
+                    <p>Rencontrez des personnes partageant vos centres d'intérêt et échangez des cultures.</p>
+                </div>
+                <div class="advantage">
+                    <h3>📚 Diversité des Domaines</h3>
+                    <p>Loisirs, professionnels ou académiques : tout est possible.</p>
+                </div>
+                <div class="advantage">
+                    <h3>🏆 Motivation par Badges</h3>
+                    <p>Progressez et débloquez des récompenses pour votre activité.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appel à l'Action -->
+        <section class="section">
+            <h2>Rejoignez SkillSwap dès Aujourd'hui</h2>
+            <p>Inscrivez-vous gratuitement et commencez à échanger vos compétences !</p>
+            <a href="#" class="btn">Créer mon Profil</a>
+        </section>
+
+        <!-- Formulaire de Contact -->
+        <section id="contact" class="section">
+            <h2>Contactez-nous</h2>
+            <form class="contact-form">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 SkillSwap. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Ajout d'une interaction simple : message de confirmation lors de l'envoi du formulaire
+        document.querySelector('.contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Merci pour votre message ! Nous vous répondrons sous peu.');
+        });
+    </script>
+</body>
+
+</html>
